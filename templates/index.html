@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<head>
+	<title>Fast Todo</title>
+	<script src="{% static 'js/performancetimer.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head> 
+<html>
+<body>
+	<h1>fast todo</h1>
+	<div class="todoapp">
+		<input class="new-todo" placeholder="What needs to be done?" name="todo" value="" autofocus>
+		<div id="toggleAll">&#10095</div>
+		<ul id="todoList"></ul>
+		<div id="todoButtonArea">
+			<div id="itemCount">0 items left</div>
+			<div id="todoFilterArea">
+				<div class="todo-filters filter-active">All</div>
+				<div class="todo-filters">Active</div>
+				<div class="todo-filters">Completed</div>
+			</div>
+			<div id="clearCompleted">Clear completed</div>
+		</div>
+	</div>	
+	<footer id="todoFooter">
+	</footer>
+	
+	<script src="{% static 'js/model.js' %}"></script>
+	<script src="{% static 'js/view.js' %}"></script>
+	<script src="{% static 'js/controller.js' %}"></script>
+	
+</body>
+</html>
